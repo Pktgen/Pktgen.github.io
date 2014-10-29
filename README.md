@@ -1,4 +1,4 @@
-# d3 process map
+# d3 process map 
 
 This is a PHP web application that displays a directed acyclic graph in a
 modern web browser using [d3.js](http://d3js.org/).  It is designed for
