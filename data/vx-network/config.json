@@ -1,0 +1,38 @@
+{
+    "title" : "VxWorks Network Dependency",
+    "graph" : {
+        "linkDistance" : 100,
+        "charge"       : -400,
+        "height"       : 1500,
+        "numColors"    : 12,
+        "labelPadding" : {
+            "left"   : 3,
+            "right"  : 3,
+            "top"    : 2,
+            "bottom" : 2
+        },
+        "labelMargin" : {
+            "left"   : 3,
+            "right"  : 3,
+            "top"    : 2,
+            "bottom" : 2
+        },
+        "ticksWithoutCollisions" : 50
+    },
+    "types" : {
+		"required"	: {
+			"short" : "Required",
+			"long"  : "Required Dependency"
+		},
+		"incWhen"	: {
+			"short" : "Include When",
+			"long"  : "Include when Dependency"
+		},
+		"library"	: {
+			"short" : "Library Symbol",
+			"long"  : "Library Symbol Dependency"
+		}
+    },
+    "constraints" : [
+    ]
+}
