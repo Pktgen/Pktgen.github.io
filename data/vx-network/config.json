@@ -3,7 +3,7 @@
     "graph" : {
         "linkDistance" : 100,
         "charge"       : -400,
-        "height"       : 1500,
+        "height"       : 2200,
         "numColors"    : 12,
         "labelPadding" : {
             "left"   : 3,

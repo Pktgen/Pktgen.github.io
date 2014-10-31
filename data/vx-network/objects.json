@@ -1,481 +1,481 @@
 [
     {
         "type"	    : "required",
-        "name"	    : "INCLUDE_IPNET",
+        "name"	    : "IPNET",
         "depends"	: []
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_IPCOM",
+        "name"	    : "IPCOM",
         "depends"	: [
-            "INCLUDE_IPNET"
+            "IPNET"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_IPCOM_USR",
+        "name"	    : "IPCOM_USR",
         "depends"	: [
-            "INCLUDE_IPCOM"
+            "IPCOM"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_IPNET_STACK",
+        "name"	    : "IPNET_STACK",
         "depends"	: [
-            "INCLUDE_IPCOM"
+            "IPCOM"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_CTYPE",
+        "name"	    : "ANSI_CTYPE",
         "depends"	: [
-            "INCLUDE_IPCOM"
+            "IPCOM"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_MEMCPY",
+        "name"	    : "ANSI_MEMCPY",
         "depends"	: [
-            "INCLUDE_IPCOM"
+            "IPCOM"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_BLIB",
+        "name"	    : "BLIB",
         "depends"	: [
-            "INCLUDE_ANSI_MEMCPY"
+            "ANSI_MEMCPY"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRLEN",
+        "name"	    : "ANSI_STRLEN",
         "depends"	: [
-            "INCLUDE_BLIB"
+            "BLIB"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_BLIB_ARCH",
+        "name"	    : "BLIB_ARCH",
         "depends"	: [
-            "INCLUDE_BLIB"
+            "BLIB"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_MEMSET",
+        "name"	    : "ANSI_MEMSET",
         "depends"	: [
-            "INCLUDE_IPCOM"
+            "IPCOM"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STDLIB_NUMBERS",
+        "name"	    : "ANSI_STDLIB_NUMBERS",
         "depends"	: [
-            "INCLUDE_IPCOM"
+            "IPCOM"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_KERNEL",
+        "name"	    : "KERNEL",
         "depends"	: [
-            "INCLUDE_ANSI_STDLIB_NUMBERS"
+            "ANSI_STDLIB_NUMBERS"
         ]
     }, {
         "type"	    : "library",
         "name"	    : "API_SPINLOCK",
         "depends"	: [
-            "INCLUDE_KERNEL"
+            "KERNEL"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_EVENTPOINT_STUB",
+        "name"	    : "EVENTPOINT_STUB",
         "depends"	: [
             "API_SPINLOCK"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_ANSI_STRCPY",
+        "name"	    : "ANSI_STRCPY",
         "depends"	: [
-            "INCLUDE_KERNEL"
+            "KERNEL"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_BOARD_INIT",
+        "name"	    : "BOARD_INIT",
         "depends"	: [
-            "INCLUDE_KERNEL"
+            "KERNEL"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_BOARD_LIB_INIT",
+        "name"	    : "BOARD_LIB_INIT",
         "depends"	: [
-            "INCLUDE_KERNEL"
+            "KERNEL"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_DLL",
+        "name"	    : "DLL",
         "depends"	: [
-            "INCLUDE_KERNEL"
+            "KERNEL"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_EDR_STUB",
+        "name"	    : "EDR_STUB",
         "depends"	: [
-            "INCLUDE_KERNEL"
+            "KERNEL"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_EXC_HANDLING",
+        "name"	    : "EXC_HANDLING",
         "depends"	: [
-            "INCLUDE_KERNEL"
+            "KERNEL"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRCAT",
+        "name"	    : "ANSI_STRCAT",
         "depends"	: [
-            "INCLUDE_EXC_HANDLING"
+            "EXC_HANDLING"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_EXC_SHOW",
+        "name"	    : "EXC_SHOW",
         "depends"	: [
-            "INCLUDE_EXC_HANDLING"
+            "EXC_HANDLING"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_FORMATTED_OUT_BASIC",
+        "name"	    : "FORMATTED_OUT_BASIC",
         "depends"	: [
-            "INCLUDE_EXC_SHOW"
+            "EXC_SHOW"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_ANSI_MEMCHR",
+        "name"	    : "ANSI_MEMCHR",
         "depends"	: [
-            "INCLUDE_FORMATTED_OUT_BASIC"
+            "FORMATTED_OUT_BASIC"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_TASK_INFO",
+        "name"	    : "TASK_INFO",
         "depends"	: [
-            "INCLUDE_EXC_SHOW"
+            "EXC_SHOW"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_ANSI_STRNCPY",
+        "name"	    : "ANSI_STRNCPY",
         "depends"	: [
-            "INCLUDE_TASK_INFO"
+            "TASK_INFO"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_OBJ_LIB",
+        "name"	    : "OBJ_LIB",
         "depends"	: [
-            "INCLUDE_TASK_INFO"
+            "TASK_INFO"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_ANSI_STRCMP",
+        "name"	    : "ANSI_STRCMP",
         "depends"	: [
-            "INCLUDE_OBJ_LIB"
+            "OBJ_LIB"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_CLASS_LIB",
+        "name"	    : "CLASS_LIB",
         "depends"	: [
-            "INCLUDE_OBJ_LIB"
+            "OBJ_LIB"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_MUTEX",
+        "name"	    : "SEM_MUTEX",
         "depends"	: [
-            "INCLUDE_CLASS_LIB"
+            "CLASS_LIB"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_LIB",
+        "name"	    : "SEM_LIB",
         "depends"	: [
-            "INCLUDE_SEM_MUTEX"
+            "SEM_MUTEX"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_Q_FIFO",
+        "name"	    : "Q_FIFO",
         "depends"	: [
-            "INCLUDE_SEM_LIB"
+            "SEM_LIB"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_EVENTS",
+        "name"	    : "SEM_EVENTS",
         "depends"	: [
-            "INCLUDE_SEM_LIB"
+            "SEM_LIB"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_VXEVENTS",
+        "name"	    : "VXEVENTS",
         "depends"	: [
-            "INCLUDE_SEM_EVENTS"
+            "SEM_EVENTS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_MSG_Q_EVENTS",
+        "name"	    : "MSG_Q_EVENTS",
         "depends"	: [
-            "INCLUDE_VXEVENTS"
+            "VXEVENTS"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MSG_Q",
+        "name"	    : "MSG_Q",
         "depends"	: [
-            "INCLUDE_MSG_Q_EVENTS"
+            "MSG_Q_EVENTS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_Q_PRI_LIST",
+        "name"	    : "Q_PRI_LIST",
         "depends"	: [
-            "INCLUDE_MSG_Q"
+            "MSG_Q"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_SLL",
+        "name"	    : "SLL",
         "depends"	: [
-            "INCLUDE_MSG_Q"
+            "MSG_Q"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_TASK_CREATE_HOOKS",
+        "name"	    : "TASK_CREATE_HOOKS",
         "depends"	: [
-            "INCLUDE_MSG_Q"
+            "MSG_Q"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_HOOKS",
+        "name"	    : "HOOKS",
         "depends"	: [
-            "INCLUDE_TASK_CREATE_HOOKS"
+            "TASK_CREATE_HOOKS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_HOOK_SHOW",
+        "name"	    : "HOOK_SHOW",
         "depends"	: [
-            "INCLUDE_HOOKS"
+            "HOOKS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_MSG_Q_OPEN",
+        "name"	    : "MSG_Q_OPEN",
         "depends"	: [
-            "INCLUDE_MSG_Q"
+            "MSG_Q"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MSG_Q_CREATE_DELETE",
+        "name"	    : "MSG_Q_CREATE_DELETE",
         "depends"	: [
-            "INCLUDE_MSG_Q_OPEN"
+            "MSG_Q_OPEN"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_OBJ_OPEN",
+        "name"	    : "OBJ_OPEN",
         "depends"	: [
-            "INCLUDE_MSG_Q_OPEN"
+            "MSG_Q_OPEN"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_OBJ_INFO",
+        "name"	    : "OBJ_INFO",
         "depends"	: [
-            "INCLUDE_OBJ_OPEN"
+            "OBJ_OPEN"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_CLASS_LIST",
+        "name"	    : "CLASS_LIST",
         "depends"	: [
-            "INCLUDE_OBJ_INFO"
+            "OBJ_INFO"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_CLASS_SHOW",
+        "name"	    : "CLASS_SHOW",
         "depends"	: [
-            "INCLUDE_CLASS_LIST"
+            "CLASS_LIST"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_HANDLE_SHOW",
+        "name"	    : "HANDLE_SHOW",
         "depends"	: [
-            "INCLUDE_CLASS_SHOW"
+            "CLASS_SHOW"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MEM_MGR_BASIC",
+        "name"	    : "MEM_MGR_BASIC",
         "depends"	: [
-            "INCLUDE_CLASS_SHOW"
+            "CLASS_SHOW"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_AVL_UINT_TREES",
+        "name"	    : "AVL_UINT_TREES",
         "depends"	: [
-            "INCLUDE_MEM_MGR_BASIC"
+            "MEM_MGR_BASIC"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_KERNEL_COMMON_HEAP",
+        "name"	    : "KERNEL_COMMON_HEAP",
         "depends"	: [
-            "INCLUDE_MEM_MGR_BASIC"
+            "MEM_MGR_BASIC"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_KERNEL_PROXIMITY_HEAP",
+        "name"	    : "KERNEL_PROXIMITY_HEAP",
         "depends"	: [
-            "INCLUDE_MEM_MGR_BASIC"
+            "MEM_MGR_BASIC"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_SEM_DELETE",
+        "name"	    : "SEM_DELETE",
         "depends"	: [
-            "INCLUDE_MEM_MGR_BASIC"
+            "MEM_MGR_BASIC"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_MEM_SHOW",
+        "name"	    : "MEM_SHOW",
         "depends"	: [
-            "INCLUDE_MEM_MGR_BASIC"
+            "MEM_MGR_BASIC"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MEM_MGR_INFO",
+        "name"	    : "MEM_MGR_INFO",
         "depends"	: [
-            "INCLUDE_MEM_SHOW"
+            "MEM_SHOW"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MEM_MGR_FULL",
+        "name"	    : "MEM_MGR_FULL",
         "depends"	: [
-            "INCLUDE_MEM_SHOW"
+            "MEM_SHOW"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_SIGNAL_ARCH",
+        "name"	    : "SIGNAL_ARCH",
         "depends"	: [
-            "INCLUDE_MEM_MGR_BASIC"
+            "MEM_MGR_BASIC"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_ANSI_LONGJMP",
+        "name"	    : "ANSI_LONGJMP",
         "depends"	: [
-            "INCLUDE_SIGNAL_ARCH"
+            "SIGNAL_ARCH"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_OBJECT_SHOW",
+        "name"	    : "OBJECT_SHOW",
         "depends"	: [
-            "INCLUDE_CLASS_SHOW"
+            "CLASS_SHOW"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_FORMATTED_IO",
+        "name"	    : "FORMATTED_IO",
         "depends"	: [
-            "INCLUDE_OBJECT_SHOW"
+            "OBJECT_SHOW"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_IO_BASIC",
+        "name"	    : "IO_BASIC",
         "depends"	: [
-            "INCLUDE_FORMATTED_IO"
+            "FORMATTED_IO"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRNCAT",
+        "name"	    : "ANSI_STRNCAT",
         "depends"	: [
-            "INCLUDE_IO_BASIC"
+            "IO_BASIC"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRNCMP",
+        "name"	    : "ANSI_STRNCMP",
         "depends"	: [
-            "INCLUDE_IO_BASIC"
+            "IO_BASIC"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_LSTLIB",
+        "name"	    : "LSTLIB",
         "depends"	: [
-            "INCLUDE_IO_BASIC"
+            "IO_BASIC"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_ABS",
+        "name"	    : "ANSI_ABS",
         "depends"	: [
-            "INCLUDE_LSTLIB"
+            "LSTLIB"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_POOL",
+        "name"	    : "POOL",
         "depends"	: [
-            "INCLUDE_IO_BASIC"
+            "IO_BASIC"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_INFO",
+        "name"	    : "SEM_INFO",
         "depends"	: [
-            "INCLUDE_IO_BASIC"
+            "IO_BASIC"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_MUTEX_CREATE",
+        "name"	    : "SEM_MUTEX_CREATE",
         "depends"	: [
-            "INCLUDE_IO_BASIC"
+            "IO_BASIC"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ATOMIC_OPERATORS",
+        "name"	    : "ATOMIC_OPERATORS",
         "depends"	: [
-            "INCLUDE_IO_BASIC"
+            "IO_BASIC"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_POSIX_TIMER_SHOW",
+        "name"	    : "POSIX_TIMER_SHOW",
         "depends"	: [
-            "INCLUDE_OBJ_INFO"
+            "OBJ_INFO"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_POSIX_TIMERS",
+        "name"	    : "POSIX_TIMERS",
         "depends"	: [
-            "INCLUDE_POSIX_TIMER_SHOW"
+            "POSIX_TIMER_SHOW"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_POSIX_CLOCKS",
+        "name"	    : "POSIX_CLOCKS",
         "depends"	: [
-            "INCLUDE_POSIX_TIMERS"
+            "POSIX_TIMERS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_TIMER_SYS",
+        "name"	    : "TIMER_SYS",
         "depends"	: [
-            "INCLUDE_POSIX_CLOCKS"
+            "POSIX_CLOCKS"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_SYSCLK_INIT",
+        "name"	    : "SYSCLK_INIT",
         "depends"	: [
-            "INCLUDE_TIMER_SYS"
+            "TIMER_SYS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_VXB_SYS_CLK",
+        "name"	    : "VXB_SYS_CLK",
         "depends"	: [
-            "INCLUDE_SYSCLK_INIT"
+            "SYSCLK_INIT"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_VXBUS",
+        "name"	    : "VXBUS",
         "depends"	: [
-            "INCLUDE_TIMER_SYS"
+            "TIMER_SYS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ISR_HANDLER_INIT",
+        "name"	    : "ISR_HANDLER_INIT",
         "depends"	: [
-            "INCLUDE_VXBUS"
+            "VXBUS"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_VXB_AUX_CLK",
+        "name"	    : "VXB_AUX_CLK",
         "depends"	: [
-            "INCLUDE_TIMER_SYS"
+            "TIMER_SYS"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_AUX_CLK",
+        "name"	    : "AUX_CLK",
         "depends"	: [
-            "INCLUDE_VXB_AUX_CLK"
+            "VXB_AUX_CLK"
         ]
     }, {
         "type"	    : "required",
         "name"	    : "DRV_TIMER_OPENPIC",
         "depends"	: [
-            "INCLUDE_AUX_CLK"
+            "AUX_CLK"
         ]
     }, {
         "type"	    : "incWhen",
@@ -485,1467 +485,1467 @@
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_FDT_LIB",
+        "name"	    : "FDT_LIB",
         "depends"	: [
             "DRV_INTCTLR_FDT_MPIC"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_VXB_RTC_CLK",
+        "name"	    : "VXB_RTC_CLK",
         "depends"	: [
-            "INCLUDE_TIMER_SYS"
+            "TIMER_SYS"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_VXB_TIMESTAMP",
+        "name"	    : "VXB_TIMESTAMP",
         "depends"	: [
-            "INCLUDE_TIMER_SYS"
-        ]
-    }, {
-        "type"	    : "incWhen",
-        "name"	    : "INCLUDE_TIMESTAMP",
-        "depends"	: [
-            "INCLUDE_VXB_TIMESTAMP"
+            "TIMER_SYS"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_VXB_TIMESTAMP64",
+        "name"	    : "TIMESTAMP",
         "depends"	: [
-            "INCLUDE_VXB_TIMESTAMP"
+            "VXB_TIMESTAMP"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_TIMESTAMP64",
+        "name"	    : "VXB_TIMESTAMP64",
         "depends"	: [
-            "INCLUDE_VXB_TIMESTAMP64"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SIGEVENT",
-        "depends"	: [
-            "INCLUDE_POSIX_TIMERS"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SIGNALS",
-        "depends"	: [
-            "INCLUDE_SIGEVENT"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_EXC_TASK",
-        "depends"	: [
-            "INCLUDE_SIGNALS"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_BINARY",
-        "depends"	: [
-            "INCLUDE_EXC_TASK"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_OPEN",
-        "depends"	: [
-            "INCLUDE_SEM_BINARY"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_SHOW",
-        "depends"	: [
-            "INCLUDE_SEM_BINARY"
+            "VXB_TIMESTAMP"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_Q_PRI_DELTA",
+        "name"	    : "TIMESTAMP64",
         "depends"	: [
-            "INCLUDE_SEM_SHOW"
+            "VXB_TIMESTAMP64"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_TIMER_OPEN",
+        "name"	    : "SIGEVENT",
         "depends"	: [
-            "INCLUDE_POSIX_TIMERS"
+            "POSIX_TIMERS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_LOGGING",
+        "name"	    : "SIGNALS",
         "depends"	: [
-            "INCLUDE_POSIX_TIMERS"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_ANSI_STDIO",
-        "depends"	: [
-            "INCLUDE_LOGGING"
+            "SIGEVENT"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRERROR",
+        "name"	    : "EXC_TASK",
         "depends"	: [
-            "INCLUDE_ANSI_STDIO"
+            "SIGNALS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRLCPY",
+        "name"	    : "SEM_BINARY",
         "depends"	: [
-            "INCLUDE_ANSI_STRERROR"
+            "EXC_TASK"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRING",
+        "name"	    : "SEM_OPEN",
         "depends"	: [
-            "INCLUDE_ANSI_STDIO"
+            "SEM_BINARY"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_MEMCMP",
+        "name"	    : "SEM_SHOW",
         "depends"	: [
-            "INCLUDE_ANSI_STRING"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_MEMMOVE",
-        "depends"	: [
-            "INCLUDE_ANSI_STRING"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRCASECMP",
-        "depends"	: [
-            "INCLUDE_ANSI_STRING"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRNCASECMP",
-        "depends"	: [
-            "INCLUDE_ANSI_STRING"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_STDIO",
-        "depends"	: [
-            "INCLUDE_ANSI_STDIO"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_STDIO_SHOW",
-        "depends"	: [
-            "INCLUDE_STDIO"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_TASK_CREATE_DELETE",
-        "depends"	: [
-            "INCLUDE_LOGGING"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_WATCHDOGS",
-        "depends"	: [
-            "INCLUDE_POSIX_TIMERS"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_WATCHDOGS_SHOW",
-        "depends"	: [
-            "INCLUDE_WATCHDOGS"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_WATCHDOGS_CREATE_DELETE",
-        "depends"	: [
-            "INCLUDE_POSIX_TIMERS"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_CONDVAR_OPEN",
-        "depends"	: [
-            "INCLUDE_OBJ_OPEN"
+            "SEM_BINARY"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_CONDVAR",
+        "name"	    : "Q_PRI_DELTA",
         "depends"	: [
-            "INCLUDE_CONDVAR_OPEN"
+            "SEM_SHOW"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "TIMER_OPEN",
+        "depends"	: [
+            "POSIX_TIMERS"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "LOGGING",
+        "depends"	: [
+            "POSIX_TIMERS"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_TASK_OPEN",
+        "name"	    : "ANSI_STDIO",
         "depends"	: [
-            "INCLUDE_OBJ_OPEN"
+            "LOGGING"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_MSG_Q_SHOW",
+        "name"	    : "ANSI_STRERROR",
         "depends"	: [
-            "INCLUDE_MSG_Q"
+            "ANSI_STDIO"
         ]
     }, {
-        "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MSG_Q_INFO",
+        "type"	    : "required",
+        "name"	    : "ANSI_STRLCPY",
         "depends"	: [
-            "INCLUDE_MSG_Q_SHOW"
+            "ANSI_STRERROR"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_STRING",
+        "depends"	: [
+            "ANSI_STDIO"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_MEMCMP",
+        "depends"	: [
+            "ANSI_STRING"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_MEMMOVE",
+        "depends"	: [
+            "ANSI_STRING"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_STRCASECMP",
+        "depends"	: [
+            "ANSI_STRING"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_STRNCASECMP",
+        "depends"	: [
+            "ANSI_STRING"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "STDIO",
+        "depends"	: [
+            "ANSI_STDIO"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "STDIO_SHOW",
+        "depends"	: [
+            "STDIO"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_OBJ_LIB_ARCH",
+        "name"	    : "TASK_CREATE_DELETE",
         "depends"	: [
-            "INCLUDE_OBJ_LIB"
+            "LOGGING"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "WATCHDOGS",
+        "depends"	: [
+            "POSIX_TIMERS"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_KERNEL_ARCH",
+        "name"	    : "WATCHDOGS_SHOW",
         "depends"	: [
-            "INCLUDE_KERNEL"
+            "WATCHDOGS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_CACHE_SUPPORT",
+        "name"	    : "WATCHDOGS_CREATE_DELETE",
         "depends"	: [
-            "INCLUDE_KERNEL_ARCH"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_MMU_GLOBAL_MAP",
-        "depends"	: [
-            "INCLUDE_CACHE_SUPPORT"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_CACHE_ENABLE",
-        "depends"	: [
-            "INCLUDE_CACHE_SUPPORT"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_VXCPULIB",
-        "depends"	: [
-            "INCLUDE_KERNEL_ARCH"
+            "POSIX_TIMERS"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_MMU_BASIC",
+        "name"	    : "CONDVAR_OPEN",
         "depends"	: [
-            "INCLUDE_KERNEL"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_VM_SHOW",
-        "depends"	: [
-            "INCLUDE_MMU_BASIC"
-        ]
-    }, {
-        "type"	    : "incWhen",
-        "name"	    : "INCLUDE_VM_SHOW_SHELL_CMD",
-        "depends"	: [
-            "INCLUDE_VM_SHOW"
-        ]
-    }, {
-        "type"	    : "incWhen",
-        "name"	    : "INCLUDE_SHELL_INTERP_CMD",
-        "depends"	: [
-            "INCLUDE_VM_SHOW_SHELL_CMD"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ADR_SPACE_SHELL_CMD",
-        "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
-        ]
-    }, {
-        "type"	    : "incWhen",
-        "name"	    : "INCLUDE_ADR_SPACE_SHOW",
-        "depends"	: [
-            "INCLUDE_ADR_SPACE_SHELL_CMD"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ADR_SPACE_LIB",
-        "depends"	: [
-            "INCLUDE_ADR_SPACE_SHOW"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_PG_POOL_LIB",
-        "depends"	: [
-            "INCLUDE_ADR_SPACE_LIB"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_PG_POOL_PHYS_LIB",
-        "depends"	: [
-            "INCLUDE_ADR_SPACE_LIB"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_PG_POOL_VIRT_LIB",
-        "depends"	: [
-            "INCLUDE_ADR_SPACE_LIB"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_PG_POOL_SHOW",
-        "depends"	: [
-            "INCLUDE_ADR_SPACE_SHOW"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_DEBUG_SHELL_CMD",
-        "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
+            "OBJ_OPEN"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_DEBUG",
+        "name"	    : "CONDVAR",
         "depends"	: [
-            "INCLUDE_DEBUG_SHELL_CMD"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SHELL",
-        "depends"	: [
-            "INCLUDE_DEBUG"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_FLOATING_POINT",
-        "depends"	: [
-            "INCLUDE_SHELL"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_MATH",
-        "depends"	: [
-            "INCLUDE_FLOATING_POINT"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_FP_TYPE",
-        "depends"	: [
-            "INCLUDE_ANSI_MATH"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SPE",
-        "depends"	: [
-            "INCLUDE_FP_TYPE"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_COPROCESSOR",
-        "depends"	: [
-            "INCLUDE_SPE"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_TASK_SWAP_HOOKS",
-        "depends"	: [
-            "INCLUDE_COPROCESSOR"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SPE_SHOW",
-        "depends"	: [
-            "INCLUDE_SPE"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SHELL_CORE",
-        "depends"	: [
-            "INCLUDE_SHELL"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_JOB_DEFER",
-        "depends"	: [
-            "INCLUDE_SHELL_CORE"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SELECT",
-        "depends"	: [
-            "INCLUDE_SHELL_CORE"
+            "CONDVAR_OPEN"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_RNG_BUF",
+        "name"	    : "TASK_OPEN",
         "depends"	: [
-            "INCLUDE_SELECT"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SELECT_SUPPORT",
-        "depends"	: [
-            "INCLUDE_SELECT"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IO_MISC",
-        "depends"	: [
-            "INCLUDE_SELECT"
+            "OBJ_OPEN"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_READ_WRITE",
+        "name"	    : "MSG_Q_SHOW",
         "depends"	: [
-            "INCLUDE_SHELL_CORE"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_TASK_LIST",
-        "depends"	: [
-            "INCLUDE_SHELL_CORE"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_TASK_RESTART",
-        "depends"	: [
-            "INCLUDE_SHELL_CORE"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_TYLIB",
-        "depends"	: [
-            "INCLUDE_SHELL_CORE"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_HW_FP_MREGS",
-        "depends"	: [
-            "INCLUDE_SHELL"
+            "MSG_Q"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_HW_FP_SHOW",
+        "name"	    : "MSG_Q_INFO",
         "depends"	: [
-            "INCLUDE_HW_FP_MREGS"
+            "MSG_Q_SHOW"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "OBJ_LIB_ARCH",
+        "depends"	: [
+            "OBJ_LIB"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "KERNEL_ARCH",
+        "depends"	: [
+            "KERNEL"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_COPROCESSOR_SHOW",
+        "name"	    : "CACHE_SUPPORT",
         "depends"	: [
-            "INCLUDE_HW_FP_SHOW"
+            "KERNEL_ARCH"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_RTP_DEBUG",
+        "name"	    : "MMU_GLOBAL_MAP",
         "depends"	: [
-            "INCLUDE_SHELL"
+            "CACHE_SUPPORT"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "CACHE_ENABLE",
+        "depends"	: [
+            "CACHE_SUPPORT"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "VXCPULIB",
+        "depends"	: [
+            "KERNEL_ARCH"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "MMU_BASIC",
+        "depends"	: [
+            "KERNEL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "VM_SHOW",
+        "depends"	: [
+            "MMU_BASIC"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_RTP",
+        "name"	    : "VM_SHOW_SHELL_CMD",
         "depends"	: [
-            "INCLUDE_RTP_DEBUG"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_MEM_RTP",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_OBJ_OWNERSHIP",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_PG_MGR_LIB",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_PG_MGR_BASIC",
-        "depends"	: [
-            "INCLUDE_PG_MGR_LIB"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_VM_RTP",
-        "depends"	: [
-            "INCLUDE_PG_MGR_LIB"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_RTP_ARCH",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SC_IOS",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_IO_RTP",
-        "depends"	: [
-            "INCLUDE_SC_IOS"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_IO_FILE_SYSTEM",
-        "depends"	: [
-            "INCLUDE_IO_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_IO_REMOVABLE",
-        "depends"	: [
-            "INCLUDE_IO_FILE_SYSTEM"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_IO_POSIX",
-        "depends"	: [
-            "INCLUDE_IO_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_PIPES",
-        "depends"	: [
-            "INCLUDE_SC_IOS"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_POSIX_DIRLIB",
-        "depends"	: [
-            "INCLUDE_SC_IOS"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IO_SYSTEM",
-        "depends"	: [
-            "INCLUDE_POSIX_DIRLIB"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_POSIX_FS",
-        "depends"	: [
-            "INCLUDE_IO_SYSTEM"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SC_KERNEL",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_TASK_VARS",
-        "depends"	: [
-            "INCLUDE_SC_KERNEL"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_TASK_SWITCH_HOOKS",
-        "depends"	: [
-            "INCLUDE_TASK_VARS"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SC_MMAN",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_MMAP",
-        "depends"	: [
-            "INCLUDE_SC_MMAN"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_BASE_KERNEL",
-        "depends"	: [
-            "INCLUDE_MMAP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SYSCTL",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SC_SYSCTL",
-        "depends"	: [
-            "INCLUDE_SYSCTL"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SYSCTL_HW",
-        "depends"	: [
-            "INCLUDE_SYSCTL"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_TASK_STACK_ALLOC",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_CAFE_RTP",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_GETADDRINFO_SYSCTL",
-        "depends"	: [
-            "INCLUDE_RTP"
+            "VM_SHOW"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_IPWRAP_GETADDRINFO",
+        "name"	    : "SHELL_INTERP_CMD",
         "depends"	: [
-            "INCLUDE_GETADDRINFO_SYSCTL"
+            "VM_SHOW_SHELL_CMD"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ADR_SPACE_SHELL_CMD",
+        "depends"	: [
+            "SHELL_INTERP_CMD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_NET_SYSCTL",
+        "name"	    : "ADR_SPACE_SHOW",
         "depends"	: [
-            "INCLUDE_GETADDRINFO_SYSCTL"
+            "ADR_SPACE_SHELL_CMD"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_IPNET_SYSCTL",
+        "name"	    : "ADR_SPACE_LIB",
         "depends"	: [
-            "INCLUDE_NET_SYSCTL"
+            "ADR_SPACE_SHOW"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_GETNAMEINFO_SYSCTL",
+        "name"	    : "PG_POOL_LIB",
         "depends"	: [
-            "INCLUDE_RTP"
+            "ADR_SPACE_LIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "PG_POOL_PHYS_LIB",
+        "depends"	: [
+            "ADR_SPACE_LIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "PG_POOL_VIRT_LIB",
+        "depends"	: [
+            "ADR_SPACE_LIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "PG_POOL_SHOW",
+        "depends"	: [
+            "ADR_SPACE_SHOW"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "DEBUG_SHELL_CMD",
+        "depends"	: [
+            "SHELL_INTERP_CMD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_IPWRAP_GETNAMEINFO",
+        "name"	    : "DEBUG",
         "depends"	: [
-            "INCLUDE_GETNAMEINFO_SYSCTL"
+            "DEBUG_SHELL_CMD"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_HOST_TBL_SYSCTL",
+        "name"	    : "SHELL",
         "depends"	: [
-            "INCLUDE_RTP"
+            "DEBUG"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "FLOATING_POINT",
+        "depends"	: [
+            "SHELL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_MATH",
+        "depends"	: [
+            "FLOATING_POINT"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "FP_TYPE",
+        "depends"	: [
+            "ANSI_MATH"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SPE",
+        "depends"	: [
+            "FP_TYPE"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "COPROCESSOR",
+        "depends"	: [
+            "SPE"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "TASK_SWAP_HOOKS",
+        "depends"	: [
+            "COPROCESSOR"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SPE_SHOW",
+        "depends"	: [
+            "SPE"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SHELL_CORE",
+        "depends"	: [
+            "SHELL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "JOB_DEFER",
+        "depends"	: [
+            "SHELL_CORE"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SELECT",
+        "depends"	: [
+            "SHELL_CORE"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "RNG_BUF",
+        "depends"	: [
+            "SELECT"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "SELECT_SUPPORT",
+        "depends"	: [
+            "SELECT"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IO_MISC",
+        "depends"	: [
+            "SELECT"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SEM_READ_WRITE",
+        "depends"	: [
+            "SHELL_CORE"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "TASK_LIST",
+        "depends"	: [
+            "SHELL_CORE"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "TASK_RESTART",
+        "depends"	: [
+            "SHELL_CORE"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "TYLIB",
+        "depends"	: [
+            "SHELL_CORE"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "HW_FP_MREGS",
+        "depends"	: [
+            "SHELL"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_HOST_TBL",
+        "name"	    : "HW_FP_SHOW",
         "depends"	: [
-            "INCLUDE_HOST_TBL_SYSCTL"
+            "HW_FP_MREGS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_IPWRAP_INETLIB",
+        "name"	    : "COPROCESSOR_SHOW",
         "depends"	: [
-            "INCLUDE_HOST_TBL"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPWRAP_GETIFADDRS",
-        "depends"	: [
-            "INCLUDE_IPWRAP_INETLIB"
+            "HW_FP_SHOW"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_REMLIB_SYSCTL",
+        "name"	    : "RTP_DEBUG",
         "depends"	: [
-            "INCLUDE_RTP"
+            "SHELL"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_REMLIB",
+        "name"	    : "RTP",
         "depends"	: [
-            "INCLUDE_REMLIB_SYSCTL"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_APPL_LOG_UTIL",
-        "depends"	: [
-            "INCLUDE_REMLIB"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SOCKLIB",
-        "depends"	: [
-            "INCLUDE_REMLIB"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SC_SOCKLIB",
-        "depends"	: [
-            "INCLUDE_SOCKLIB"
+            "RTP_DEBUG"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_RTP_SHELL_C",
+        "name"	    : "MEM_RTP",
         "depends"	: [
-            "INCLUDE_RTP"
+            "RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "OBJ_OWNERSHIP",
+        "depends"	: [
+            "RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "PG_MGR_LIB",
+        "depends"	: [
+            "RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "PG_MGR_BASIC",
+        "depends"	: [
+            "PG_MGR_LIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "VM_RTP",
+        "depends"	: [
+            "PG_MGR_LIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "RTP_ARCH",
+        "depends"	: [
+            "RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SC_IOS",
+        "depends"	: [
+            "RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "IO_RTP",
+        "depends"	: [
+            "SC_IOS"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "IO_FILE_SYSTEM",
+        "depends"	: [
+            "IO_RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "IO_REMOVABLE",
+        "depends"	: [
+            "IO_FILE_SYSTEM"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "IO_POSIX",
+        "depends"	: [
+            "IO_RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "PIPES",
+        "depends"	: [
+            "SC_IOS"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "POSIX_DIRLIB",
+        "depends"	: [
+            "SC_IOS"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IO_SYSTEM",
+        "depends"	: [
+            "POSIX_DIRLIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "POSIX_FS",
+        "depends"	: [
+            "IO_SYSTEM"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SC_KERNEL",
+        "depends"	: [
+            "RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "TASK_VARS",
+        "depends"	: [
+            "SC_KERNEL"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "TASK_SWITCH_HOOKS",
+        "depends"	: [
+            "TASK_VARS"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SC_MMAN",
+        "depends"	: [
+            "RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "MMAP",
+        "depends"	: [
+            "SC_MMAN"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "BASE_KERNEL",
+        "depends"	: [
+            "MMAP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SYSCTL",
+        "depends"	: [
+            "RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SC_SYSCTL",
+        "depends"	: [
+            "SYSCTL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SYSCTL_HW",
+        "depends"	: [
+            "SYSCTL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "TASK_STACK_ALLOC",
+        "depends"	: [
+            "RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "CAFE_RTP",
+        "depends"	: [
+            "RTP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "GETADDRINFO_SYSCTL",
+        "depends"	: [
+            "RTP"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_ENV_VARS",
+        "name"	    : "IPWRAP_GETADDRINFO",
         "depends"	: [
-            "INCLUDE_RTP_SHELL_C"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SEM_READ_WRITE_CREATE",
-        "depends"	: [
-            "INCLUDE_ENV_VARS"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_RTP_SHELL_CMD",
-        "depends"	: [
-            "INCLUDE_RTP"
+            "GETADDRINFO_SYSCTL"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_RTP_SHOW_SHELL_CMD",
+        "name"	    : "NET_SYSCTL",
         "depends"	: [
-            "INCLUDE_RTP_SHELL_CMD"
+            "GETADDRINFO_SYSCTL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "IPNET_SYSCTL",
+        "depends"	: [
+            "NET_SYSCTL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "GETNAMEINFO_SYSCTL",
+        "depends"	: [
+            "RTP"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_RTP_SHOW",
+        "name"	    : "IPWRAP_GETNAMEINFO",
         "depends"	: [
-            "INCLUDE_RTP_SHOW_SHELL_CMD"
+            "GETNAMEINFO_SYSCTL"
         ]
     }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_PG_MGR_SHOW",
+        "type"	    : "required",
+        "name"	    : "HOST_TBL_SYSCTL",
         "depends"	: [
-            "INCLUDE_RTP_SHOW"
+            "RTP"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_JOB_TASK",
+        "name"	    : "HOST_TBL",
         "depends"	: [
-            "INCLUDE_RTP_SHELL_CMD"
+            "HOST_TBL_SYSCTL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "IPWRAP_INETLIB",
+        "depends"	: [
+            "HOST_TBL"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPWRAP_GETIFADDRS",
+        "depends"	: [
+            "IPWRAP_INETLIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "REMLIB_SYSCTL",
+        "depends"	: [
+            "RTP"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_RTP_HOOKS",
+        "name"	    : "REMLIB",
         "depends"	: [
-            "INCLUDE_RTP_SHELL_CMD"
+            "REMLIB_SYSCTL"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "APPL_LOG_UTIL",
+        "depends"	: [
+            "REMLIB"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "SOCKLIB",
+        "depends"	: [
+            "REMLIB"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "SC_SOCKLIB",
+        "depends"	: [
+            "SOCKLIB"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_SC_POSIX",
+        "name"	    : "RTP_SHELL_C",
         "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_EXCHANGE",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRDUP",
-        "depends"	: [
-            "INCLUDE_RTP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SHELL_BANNER",
-        "depends"	: [
-            "INCLUDE_SHELL"
+            "RTP"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_BANNER",
+        "name"	    : "ENV_VARS",
         "depends"	: [
-            "INCLUDE_SHELL_BANNER"
+            "RTP_SHELL_C"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "SEM_READ_WRITE_CREATE",
+        "depends"	: [
+            "ENV_VARS"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_SHELL_INTERP_C",
+        "name"	    : "RTP_SHELL_CMD",
         "depends"	: [
-            "INCLUDE_SHELL"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_TIP",
-        "depends"	: [
-            "INCLUDE_SHELL"
+            "RTP"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_TIP_CMD",
+        "name"	    : "RTP_SHOW_SHELL_CMD",
         "depends"	: [
-            "INCLUDE_TIP"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_LOADER_CODE",
-        "depends"	: [
-            "INCLUDE_SHELL"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_LOADER",
-        "depends"	: [
-            "INCLUDE_LOADER_CODE"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_MODULE_SHELL_CMD",
-        "depends"	: [
-            "INCLUDE_LOADER"
+            "RTP_SHELL_CMD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MODULE_MANAGER",
+        "name"	    : "RTP_SHOW",
         "depends"	: [
-            "INCLUDE_MODULE_SHELL_CMD"
+            "RTP_SHOW_SHELL_CMD"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_STACKTRACE_MODULE",
+        "name"	    : "PG_MGR_SHOW",
         "depends"	: [
-            "INCLUDE_MODULE_MANAGER"
+            "RTP_SHOW"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_LOADER_HOOKS",
+        "name"	    : "JOB_TASK",
         "depends"	: [
-            "INCLUDE_STACKTRACE_MODULE"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_UNLOADER",
-        "depends"	: [
-            "INCLUDE_LOADER_HOOKS"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_UNLOADER_SHELL_CMD",
-        "depends"	: [
-            "INCLUDE_UNLOADER"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_VXDBG_MODULE",
-        "depends"	: [
-            "INCLUDE_UNLOADER"
+            "RTP_SHELL_CMD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_VXDBG_RUNCTRL",
+        "name"	    : "RTP_HOOKS",
         "depends"	: [
-            "INCLUDE_VXDBG_MODULE"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_VXDBG",
-        "depends"	: [
-            "INCLUDE_VXDBG_RUNCTRL"
+            "RTP_SHELL_CMD"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_VXDBG_HOOK",
+        "name"	    : "SC_POSIX",
         "depends"	: [
-            "INCLUDE_VXDBG"
+            "RTP"
         ]
     }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SEM_BINARY_CREATE",
+        "type"	    : "required",
+        "name"	    : "SEM_EXCHANGE",
         "depends"	: [
-            "INCLUDE_VXDBG_RUNCTRL"
+            "RTP"
         ]
     }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_VXMEMPROBE_INIT",
+        "type"	    : "required",
+        "name"	    : "ANSI_STRDUP",
         "depends"	: [
-            "INCLUDE_VXDBG_RUNCTRL"
+            "RTP"
         ]
     }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SYM_TBL",
+        "type"	    : "required",
+        "name"	    : "SHELL_BANNER",
         "depends"	: [
-            "INCLUDE_UNLOADER"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_CPLUS_DEMANGLER",
-        "depends"	: [
-            "INCLUDE_SYM_TBL"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SYM_SHELL_CMD",
-        "depends"	: [
-            "INCLUDE_SYM_TBL"
+            "SHELL"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_SYM_TBL_SHOW",
+        "name"	    : "BANNER",
         "depends"	: [
-            "INCLUDE_SYM_SHELL_CMD"
+            "SHELL_BANNER"
         ]
     }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_HASH",
+        "type"	    : "required",
+        "name"	    : "SHELL_INTERP_C",
         "depends"	: [
-            "INCLUDE_SYM_TBL"
+            "SHELL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "TIP",
+        "depends"	: [
+            "SHELL"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_SC_SHL",
+        "name"	    : "TIP_CMD",
         "depends"	: [
-            "INCLUDE_STACKTRACE_MODULE"
+            "TIP"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "LOADER_CODE",
+        "depends"	: [
+            "SHELL"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_BMPLIB",
+        "name"	    : "LOADER",
         "depends"	: [
-            "INCLUDE_SC_SHL"
+            "LOADER_CODE"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "MODULE_SHELL_CMD",
+        "depends"	: [
+            "LOADER"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_SHL",
+        "name"	    : "MODULE_MANAGER",
         "depends"	: [
-            "INCLUDE_STACKTRACE_MODULE"
+            "MODULE_SHELL_CMD"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_SHL_SHELL_CMD",
+        "name"	    : "STACKTRACE_MODULE",
         "depends"	: [
-            "INCLUDE_SHL"
+            "MODULE_MANAGER"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_SHL_SHOW",
+        "name"	    : "LOADER_HOOKS",
         "depends"	: [
-            "INCLUDE_SHL_SHELL_CMD"
+            "STACKTRACE_MODULE"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_WINDVIEW_MODULE_CLASS",
+        "name"	    : "UNLOADER",
         "depends"	: [
-            "INCLUDE_MODULE_MANAGER"
+            "LOADER_HOOKS"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "UNLOADER_SHELL_CMD",
+        "depends"	: [
+            "UNLOADER"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "VXDBG_MODULE",
+        "depends"	: [
+            "UNLOADER"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_WINDVIEW_CLASS",
+        "name"	    : "VXDBG_RUNCTRL",
         "depends"	: [
-            "INCLUDE_WINDVIEW_MODULE_CLASS"
+            "VXDBG_MODULE"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_CHECKSUM",
+        "name"	    : "VXDBG",
         "depends"	: [
-            "INCLUDE_WINDVIEW_CLASS"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_RBUFF",
-        "depends"	: [
-            "INCLUDE_WINDVIEW_CLASS"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_RBUFF_SHOW",
-        "depends"	: [
-            "INCLUDE_RBUFF"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SV_DATACOLLECTOR",
-        "depends"	: [
-            "INCLUDE_WINDVIEW_CLASS"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_DATACOLLECTOR",
-        "depends"	: [
-            "INCLUDE_SV_DATACOLLECTOR"
+            "VXDBG_RUNCTRL"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_EVENTPOINT",
+        "name"	    : "VXDBG_HOOK",
         "depends"	: [
-            "INCLUDE_DATACOLLECTOR"
+            "VXDBG"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_WINDVIEW",
+        "name"	    : "SEM_BINARY_CREATE",
         "depends"	: [
-            "INCLUDE_WINDVIEW_CLASS"
+            "VXDBG_RUNCTRL"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_STACKTRACE",
+        "name"	    : "VXMEMPROBE_INIT",
         "depends"	: [
-            "INCLUDE_WINDVIEW"
+            "VXDBG_RUNCTRL"
         ]
     }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_STACKTRACE_SHD",
+        "type"	    : "library",
+        "name"	    : "SYM_TBL",
         "depends"	: [
-            "INCLUDE_STACKTRACE"
+            "UNLOADER"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "CPLUS_DEMANGLER",
+        "depends"	: [
+            "SYM_TBL"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "SYM_SHELL_CMD",
+        "depends"	: [
+            "SYM_TBL"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_SC_SD",
+        "name"	    : "SYM_TBL_SHOW",
         "depends"	: [
-            "INCLUDE_STACKTRACE_SHD"
+            "SYM_SHELL_CMD"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "HASH",
+        "depends"	: [
+            "SYM_TBL"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_SHARED_DATA",
+        "name"	    : "SC_SHL",
         "depends"	: [
-            "INCLUDE_STACKTRACE_SHD"
+            "STACKTRACE_MODULE"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_VM_INVTBL",
+        "name"	    : "BMPLIB",
         "depends"	: [
-            "INCLUDE_SHARED_DATA"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SHARED_DATA_SHOW",
-        "depends"	: [
-            "INCLUDE_SHARED_DATA"
+            "SC_SHL"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_SHARED_DATA_SHOW_SHELL_CMD",
+        "name"	    : "SHL",
         "depends"	: [
-            "INCLUDE_SHARED_DATA_SHOW"
+            "STACKTRACE_MODULE"
         ]
     }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_TLS_LOADER_SUPPORT",
+        "type"	    : "library",
+        "name"	    : "SHL_SHELL_CMD",
         "depends"	: [
-            "INCLUDE_LOADER"
+            "SHL"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_TLS",
+        "name"	    : "SHL_SHOW",
         "depends"	: [
-            "INCLUDE_TLS_LOADER_SUPPORT"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_TASK_SHOW",
-        "depends"	: [
-            "INCLUDE_DEBUG"
+            "SHL_SHELL_CMD"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_TASK_TOOLS_UTIL",
+        "name"	    : "WINDVIEW_MODULE_CLASS",
         "depends"	: [
-            "INCLUDE_TASK_SHOW"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_DISK_UTIL_SHELL_CMD",
-        "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
+            "MODULE_MANAGER"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_DISK_UTIL",
+        "name"	    : "WINDVIEW_CLASS",
         "depends"	: [
-            "INCLUDE_DISK_UTIL_SHELL_CMD"
+            "WINDVIEW_MODULE_CLASS"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "CHECKSUM",
+        "depends"	: [
+            "WINDVIEW_CLASS"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "RBUFF",
+        "depends"	: [
+            "WINDVIEW_CLASS"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "RBUFF_SHOW",
+        "depends"	: [
+            "RBUFF"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "SV_DATACOLLECTOR",
+        "depends"	: [
+            "WINDVIEW_CLASS"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "DATACOLLECTOR",
+        "depends"	: [
+            "SV_DATACOLLECTOR"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STDLIB",
+        "name"	    : "EVENTPOINT",
         "depends"	: [
-            "INCLUDE_DISK_UTIL"
+            "DATACOLLECTOR"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "WINDVIEW",
+        "depends"	: [
+            "WINDVIEW_CLASS"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "STACKTRACE",
+        "depends"	: [
+            "WINDVIEW"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_ABORT",
+        "name"	    : "STACKTRACE_SHD",
         "depends"	: [
-            "INCLUDE_ANSI_STDLIB"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_ATOF",
-        "depends"	: [
-            "INCLUDE_ANSI_STDLIB"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_STRTOD",
-        "depends"	: [
-            "INCLUDE_ANSI_ATOF"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_BSEARCH",
-        "depends"	: [
-            "INCLUDE_ANSI_STDLIB"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ANSI_TIME",
-        "depends"	: [
-            "INCLUDE_DISK_UTIL"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_EDR_SHELL_CMD",
-        "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
+            "STACKTRACE"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_EDR_SHOW",
+        "name"	    : "SC_SD",
         "depends"	: [
-            "INCLUDE_EDR_SHELL_CMD"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_EDR_ERRLOG",
-        "depends"	: [
-            "INCLUDE_EDR_SHOW"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_EDR_PM",
-        "depends"	: [
-            "INCLUDE_EDR_ERRLOG"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_HISTORY_FILE_SHELL_CMD",
-        "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
+            "STACKTRACE_SHD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_SHELL_HISTORY_FILE",
+        "name"	    : "SHARED_DATA",
         "depends"	: [
-            "INCLUDE_HISTORY_FILE_SHELL_CMD"
+            "STACKTRACE_SHD"
         ]
     }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_MAPPED_FILES_SHOW_SHELL_CMD",
+        "type"	    : "library",
+        "name"	    : "VM_INVTBL",
         "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
+            "SHARED_DATA"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "SHARED_DATA_SHOW",
+        "depends"	: [
+            "SHARED_DATA"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MAPPED_FILES_SHOW",
+        "name"	    : "SHARED_DATA_SHOW_SHELL_CMD",
         "depends"	: [
-            "INCLUDE_MAPPED_FILES_SHOW_SHELL_CMD"
+            "SHARED_DATA_SHOW"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_POSIX_MAPPED_FILES",
+        "name"	    : "TLS_LOADER_SUPPORT",
         "depends"	: [
-            "INCLUDE_MAPPED_FILES_SHOW"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_FS_MONITOR",
-        "depends"	: [
-            "INCLUDE_POSIX_MAPPED_FILES"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_RAWFS",
-        "depends"	: [
-            "INCLUDE_FS_MONITOR"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_FS_EVENT_UTIL",
-        "depends"	: [
-            "INCLUDE_RAWFS"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_ERF",
-        "depends"	: [
-            "INCLUDE_FS_EVENT_UTIL"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_SEM_COUNTING_CREATE",
-        "depends"	: [
-            "INCLUDE_ERF"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SEM_COUNTING",
-        "depends"	: [
-            "INCLUDE_SEM_COUNTING_CREATE"
-        ]
-    }, {
-        "type"	    : "required",
-        "name"	    : "INCLUDE_XBD",
-        "depends"	: [
-            "INCLUDE_RAWFS"
+            "LOADER"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_DEVICE_MANAGER",
+        "name"	    : "TLS",
         "depends"	: [
-            "INCLUDE_XBD"
+            "TLS_LOADER_SUPPORT"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_MEM_EDR_RTP_SHELL_CMD",
+        "name"	    : "TASK_SHOW",
         "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
+            "DEBUG"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "TASK_TOOLS_UTIL",
+        "depends"	: [
+            "TASK_SHOW"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "DISK_UTIL_SHELL_CMD",
+        "depends"	: [
+            "SHELL_INTERP_CMD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MEM_EDR_RTP_SHOW",
+        "name"	    : "DISK_UTIL",
         "depends"	: [
-            "INCLUDE_MEM_EDR_RTP_SHELL_CMD"
+            "DISK_UTIL_SHELL_CMD"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_MEM_EDR_SHELL_CMD",
+        "name"	    : "ANSI_STDLIB",
         "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
+            "DISK_UTIL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_ABORT",
+        "depends"	: [
+            "ANSI_STDLIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_ATOF",
+        "depends"	: [
+            "ANSI_STDLIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_STRTOD",
+        "depends"	: [
+            "ANSI_ATOF"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_BSEARCH",
+        "depends"	: [
+            "ANSI_STDLIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ANSI_TIME",
+        "depends"	: [
+            "DISK_UTIL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "EDR_SHELL_CMD",
+        "depends"	: [
+            "SHELL_INTERP_CMD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MEM_EDR_SHOW",
+        "name"	    : "EDR_SHOW",
         "depends"	: [
-            "INCLUDE_MEM_EDR_SHELL_CMD"
+            "EDR_SHELL_CMD"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_MEM_EDR",
+        "name"	    : "EDR_ERRLOG",
         "depends"	: [
-            "INCLUDE_MEM_EDR_SHOW"
+            "EDR_SHOW"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_MEM_EDR2",
+        "name"	    : "EDR_PM",
         "depends"	: [
-            "INCLUDE_MEM_EDR"
+            "EDR_ERRLOG"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_SPY_SHELL_CMD",
+        "name"	    : "HISTORY_FILE_SHELL_CMD",
         "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
+            "SHELL_INTERP_CMD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_SPY",
+        "name"	    : "SHELL_HISTORY_FILE",
         "depends"	: [
-            "INCLUDE_SPY_SHELL_CMD"
+            "HISTORY_FILE_SHELL_CMD"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_TASK_SHELL_CMD",
+        "name"	    : "MAPPED_FILES_SHOW_SHELL_CMD",
         "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
+            "SHELL_INTERP_CMD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_TASK_HOOKS_SHOW",
+        "name"	    : "MAPPED_FILES_SHOW",
         "depends"	: [
-            "INCLUDE_TASK_SHELL_CMD"
+            "MAPPED_FILES_SHOW_SHELL_CMD"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_WRLOAD_CMD",
+        "name"	    : "POSIX_MAPPED_FILES",
         "depends"	: [
-            "INCLUDE_SHELL_INTERP_CMD"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_OFFSET_SYMBOLS",
-        "depends"	: [
-            "INCLUDE_KERNEL"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_Q_PRI_BMAP",
-        "depends"	: [
-            "INCLUDE_KERNEL"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_BSP_MACROS",
-        "depends"	: [
-            "INCLUDE_KERNEL"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_DEFERRED_INTERRUPT_ENABLE",
-        "depends"	: [
-            "INCLUDE_KERNEL"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_MEMORY_CONFIG",
-        "depends"	: [
-            "INCLUDE_KERNEL"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_SYS_START",
-        "depends"	: [
-            "INCLUDE_KERNEL"
+            "MAPPED_FILES_SHOW"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_MUX2",
+        "name"	    : "FS_MONITOR",
         "depends"	: [
-            "INCLUDE_IPCOM"
+            "POSIX_MAPPED_FILES"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_MUX2_OVER_END",
+        "name"	    : "RAWFS",
         "depends"	: [
-            "INCLUDE_MUX2"
+            "FS_MONITOR"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "FS_EVENT_UTIL",
+        "depends"	: [
+            "RAWFS"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "ERF",
+        "depends"	: [
+            "FS_EVENT_UTIL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SEM_COUNTING_CREATE",
+        "depends"	: [
+            "ERF"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "SEM_COUNTING",
+        "depends"	: [
+            "SEM_COUNTING_CREATE"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "XBD",
+        "depends"	: [
+            "RAWFS"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_IPNET_USE_VLAN",
+        "name"	    : "DEVICE_MANAGER",
         "depends"	: [
-            "INCLUDE_MUX2_OVER_END"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPCOM_USE_ETHERNET",
-        "depends"	: [
-            "INCLUDE_IPNET_USE_VLAN"
+            "XBD"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_IPCOM_USE_INET",
+        "name"	    : "MEM_EDR_RTP_SHELL_CMD",
         "depends"	: [
-            "INCLUDE_IPCOM_USE_ETHERNET"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPV4",
-        "depends"	: [
-            "INCLUDE_IPCOM_USE_INET"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPNET_SOCKET",
-        "depends"	: [
-            "INCLUDE_IPCOM_USE_INET"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPNET_USE_LOOPBACK",
-        "depends"	: [
-            "INCLUDE_IPNET_SOCKET"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPNET_LOOPBACK_CONFIG",
-        "depends"	: [
-            "INCLUDE_IPNET_USE_LOOPBACK"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPNET_USE_NETLINKSOCK",
-        "depends"	: [
-            "INCLUDE_IPNET_SOCKET"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPNET_USE_SOCK_COMPAT",
-        "depends"	: [
-            "INCLUDE_IPNET_SOCKET"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPTCP",
-        "depends"	: [
-            "INCLUDE_IPNET_SOCKET"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPNET_USE_MCAST_ROUTING",
-        "depends"	: [
-            "INCLUDE_IPCOM_USE_INET"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_IPNET_USE_ROUTESOCK",
-        "depends"	: [
-            "INCLUDE_IPCOM_USE_INET"
+            "SHELL_INTERP_CMD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_MUX_COMMON",
+        "name"	    : "MEM_EDR_RTP_SHOW",
         "depends"	: [
-            "INCLUDE_MUX2_OVER_END"
+            "MEM_EDR_RTP_SHELL_CMD"
         ]
     }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_NETWORK",
+        "type"	    : "required",
+        "name"	    : "MEM_EDR_SHELL_CMD",
         "depends"	: [
-            "INCLUDE_MUX_COMMON"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_JOB_QUEUE",
-        "depends"	: [
-            "INCLUDE_MUX_COMMON"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_NET_DAEMON",
-        "depends"	: [
-            "INCLUDE_MUX_COMMON"
-        ]
-    }, {
-        "type"	    : "library",
-        "name"	    : "INCLUDE_REBOOT_HOOKS",
-        "depends"	: [
-            "INCLUDE_MUX_COMMON"
+            "SHELL_INTERP_CMD"
         ]
     }, {
         "type"	    : "incWhen",
-        "name"	    : "INCLUDE_VXMUX_MBLK",
+        "name"	    : "MEM_EDR_SHOW",
         "depends"	: [
-            "INCLUDE_MUX2_OVER_END"
+            "MEM_EDR_SHELL_CMD"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "MEM_EDR",
+        "depends"	: [
+            "MEM_EDR_SHOW"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "MEM_EDR2",
+        "depends"	: [
+            "MEM_EDR"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "SPY_SHELL_CMD",
+        "depends"	: [
+            "SHELL_INTERP_CMD"
+        ]
+    }, {
+        "type"	    : "incWhen",
+        "name"	    : "SPY",
+        "depends"	: [
+            "SPY_SHELL_CMD"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "TASK_SHELL_CMD",
+        "depends"	: [
+            "SHELL_INTERP_CMD"
+        ]
+    }, {
+        "type"	    : "incWhen",
+        "name"	    : "TASK_HOOKS_SHOW",
+        "depends"	: [
+            "TASK_SHELL_CMD"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "WRLOAD_CMD",
+        "depends"	: [
+            "SHELL_INTERP_CMD"
         ]
     }, {
         "type"	    : "library",
-        "name"	    : "INCLUDE_VXMUX_NULLBUFPOOL",
+        "name"	    : "OFFSET_SYMBOLS",
         "depends"	: [
-            "INCLUDE_VXMUX_MBLK"
+            "KERNEL"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "Q_PRI_BMAP",
+        "depends"	: [
+            "KERNEL"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "BSP_MACROS",
+        "depends"	: [
+            "KERNEL"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "DEFERRED_INTERRUPT_ENABLE",
+        "depends"	: [
+            "KERNEL"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "MEMORY_CONFIG",
+        "depends"	: [
+            "KERNEL"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "SYS_START",
+        "depends"	: [
+            "KERNEL"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_NETBUFLIB",
+        "name"	    : "MUX2",
         "depends"	: [
-            "INCLUDE_VXMUX_NULLBUFPOOL"
+            "IPCOM"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "MUX2_OVER_END",
+        "depends"	: [
+            "MUX2"
+        ]
+    }, {
+        "type"	    : "incWhen",
+        "name"	    : "IPNET_USE_VLAN",
+        "depends"	: [
+            "MUX2_OVER_END"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPCOM_USE_ETHERNET",
+        "depends"	: [
+            "IPNET_USE_VLAN"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_NETBUFPOOL",
+        "name"	    : "IPCOM_USE_INET",
         "depends"	: [
-            "INCLUDE_NETBUFLIB"
+            "IPCOM_USE_ETHERNET"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPV4",
+        "depends"	: [
+            "IPCOM_USE_INET"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPNET_SOCKET",
+        "depends"	: [
+            "IPCOM_USE_INET"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPNET_USE_LOOPBACK",
+        "depends"	: [
+            "IPNET_SOCKET"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPNET_LOOPBACK_CONFIG",
+        "depends"	: [
+            "IPNET_USE_LOOPBACK"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPNET_USE_NETLINKSOCK",
+        "depends"	: [
+            "IPNET_SOCKET"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPNET_USE_SOCK_COMPAT",
+        "depends"	: [
+            "IPNET_SOCKET"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPTCP",
+        "depends"	: [
+            "IPNET_SOCKET"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPNET_USE_MCAST_ROUTING",
+        "depends"	: [
+            "IPCOM_USE_INET"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "IPNET_USE_ROUTESOCK",
+        "depends"	: [
+            "IPCOM_USE_INET"
+        ]
+    }, {
+        "type"	    : "incWhen",
+        "name"	    : "MUX_COMMON",
+        "depends"	: [
+            "MUX2_OVER_END"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "NETWORK",
+        "depends"	: [
+            "MUX_COMMON"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "JOB_QUEUE",
+        "depends"	: [
+            "MUX_COMMON"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "NET_DAEMON",
+        "depends"	: [
+            "MUX_COMMON"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "REBOOT_HOOKS",
+        "depends"	: [
+            "MUX_COMMON"
+        ]
+    }, {
+        "type"	    : "incWhen",
+        "name"	    : "VXMUX_MBLK",
+        "depends"	: [
+            "MUX2_OVER_END"
+        ]
+    }, {
+        "type"	    : "library",
+        "name"	    : "VXMUX_NULLBUFPOOL",
+        "depends"	: [
+            "VXMUX_MBLK"
         ]
     }, {
         "type"	    : "required",
-        "name"	    : "INCLUDE_TASK_UTIL",
+        "name"	    : "NETBUFLIB",
         "depends"	: [
-            "INCLUDE_IPCOM"
+            "VXMUX_NULLBUFPOOL"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "NETBUFPOOL",
+        "depends"	: [
+            "NETBUFLIB"
+        ]
+    }, {
+        "type"	    : "required",
+        "name"	    : "TASK_UTIL",
+        "depends"	: [
+            "IPCOM"
         ]
     }
 ]
